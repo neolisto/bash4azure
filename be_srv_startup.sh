@@ -28,7 +28,7 @@ sudo echo '/**' >src/test/java/academy/softserve/eschool/controller/ScheduleCont
 sudo echo '**/' >>src/test/java/academy/softserve/eschool/controller/ScheduleControllerIntegrationTest.java
 
 # changing default DB-server IP to real
-sudo sed -i 's/localhost/'${var.DB_SRV_IP}'/g' src/main/resources/application.properties
+sudo sed -i 's/localhost/'$DB_SRV_IP'/g' src/main/resources/application.properties
 
 # changing default DB-server user to real
 sudo sed -i '3s/.*/spring.datasource.username=\'$DATASOURCE_USERNAME'/' src/main/resources/application.properties
