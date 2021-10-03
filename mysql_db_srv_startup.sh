@@ -29,6 +29,10 @@ echo 'installing mysql-server'
 sudo DEBIAN_FRONTEND=noninteractive apt install -y mysql-server=5.7.35-1ubuntu18.04
 echo 'mysql installed'
 
+echo $DATASOURCE_USERNAME
+echo $DATASOURCE_PASSWORD
+sleep 30s
+
 #creating database
 echo 'creating DATABASE'
 echo 'CREATE DATABASE eschool;' > db_creating.tmp
