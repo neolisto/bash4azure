@@ -5,6 +5,9 @@ echo 'system update'
 sudo apt update
 sudo apt upgrade -y
 
+export DATASOURCE_USERNAME=Spark
+export DATASOURCE_PASSWORD=Qwerty12345
+
 #adding mysql v. 5.7 to apt installation repository
 echo 'adding repos to source list'
 sudo echo 'deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-apt-config' >> /etc/apt/sources.list.d/mysql.list
