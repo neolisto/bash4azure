@@ -31,8 +31,10 @@ sudo echo '**/' >>src/test/java/academy/softserve/eschool/controller/ScheduleCon
 sudo sed -i 's/localhost/'$DB_SRV_IP'/g' src/main/resources/application.properties
 
 # changing default DB-server user to real
-sudo sed -i '3s/.*/spring.datasource.username=\'$DATASOURCE_USERNAME'/' src/main/resources/application.properties
-sudo sed -i '4s/.*/spring.datasource.password=\'$DATASOURCE_PASSWORD'/' src/main/resources/application.properties
+echo $DATASOURCE_USERNAME
+echo $DATASOURCE_PASSWORD
+sudo sed -i '3s/.*/spring.datasource.username='$DATASOURCE_USERNAME'/' src/main/resources/application.properties
+sudo sed -i '4s/.*/spring.datasource.password='$DATASOURCE_PASSWORD'/' src/main/resources/application.properties
 
 #  maven build start
 sudo mvn clean
